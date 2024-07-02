@@ -5,8 +5,13 @@ import Logo from "../../public/logo_vanir.svg";
 
 <header>
   <div id="left" class="links">
-	<a href="#" class="links">Teams</a>
-	<a href="#" class="links">Tournaments</a>
+    <div>
+      <a href="#" class="links">Home</a>
+    </div>
+    <div>
+      <a href="#" class="links">Teams</a>
+      <a href="#" class="links">Tournaments</a>
+    </div>
   </div>
   <div id="logo" >
     <a href="#"><img src={Logo.src} alt="The Logo" width="55px" height="55px" /></a>
@@ -35,7 +40,7 @@ import Logo from "../../public/logo_vanir.svg";
     display: flex;
   }
   header #left {
-    justify-content: end;
+    justify-content: space-between;
   }
   
 </style>
