@@ -59,11 +59,40 @@
   const toggle = document.querySelector("button");
   const rootEl = document.documentElement;
 
-  if(toggle){
+  const getInitialColourMode = () => {
+    const previousColour = window.localStorage.getItem(COLOUR_MODE);
+
+    if (previousColour) {
+      return previousColour;
+    }
+
+    if (window.matchMedia("(prefers-color-scheme: dark").matches) {
+      return DARK_THEME;
+    }
+
+    return LIGHT_THEME;
+  };
+
+  const initialColourMode = getInitialColourMode();
+  const setInitialColourMode = (mode: string) => {
+    if (mode == LIGHT_THEME) {
+      rootEl.classList.remove(DARK_THEME_CLASS);
+    } else {
+      rootEl.classList.add(DARK_THEME_CLASS);
+    }
+  };
+
+  setInitialColourMode(initialColourMode);
+
+  if (toggle) {
     toggle.addEventListener("click", () => {
-        rootEl.classList.toggle(DARK_THEME_CLASS);
+      rootEl.classList.toggle(DARK_THEME_CLASS);
+
+      const colourMode = rootEl.classList.contains(DARK_THEME_CLASS)
+        ? DARK_THEME
+        : LIGHT_THEME;
+
+      window.localStorage.setItem(COLOUR_MODE, colourMode);
     });
   }
-  
-
 </script>
