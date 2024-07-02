@@ -1,21 +1,74 @@
 ---
-import "../styles/global.css"
+import "../styles/global.css";
 ---
 
 <form method="post">
-  <input class="email"type="text" placeholder="Email Adress"/> <br>
-  <input class="password" type="password" placeholder="Password"/>
-  <div class="underFormRemember">
-    <input type="checkbox" name="remember" id="remember" /> Remember me
+  <div class="form-group">
+    <div class="input-group col">
+      <input class="form-control" type="text" placeholder="Email">
+      <br>
+      <input class="form-control" type="password" placeholder="Password">
+    </div>
   </div>
+  <br>
   <div id="underFormForgot">
-    <a class="links" href="#"><p id="forgotLink" >Forgot password!</p></a>
+    <input type="checkbox" name="remember" id="remember" /> Remember me
+    <a class="links" href="#"><p id="forgotLink">Forgot password!</p></a>
+    <br>
   </div>
-  <input type="submit" value="Sign In" />
+  <div class="form-control">
+    <input type="submit" value="Sign In" />
+  </div>
+  <br>
 </form>
 
 <style>
-  #forgotLink{
+  #forgotLink {
     color: var(--grey-200);
+  }
+  .form-control input[type="submit"]{
+    font-size: 100%;
+    background-color: var(--blue-200);
+    padding: 12px;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    width: 14%;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  input.form-control {
+    border: 0;
+    padding: 10px;
+  }
+  input[type="text"]{
+    border-bottom: 2px solid var(--grey-200);
+    
+  }
+  input{
+    font-size: large;
+  }
+  input:active{
+    border: 0;
+  }
+  input:focus{
+    border: 0;
+  }
+  .input-group {
+    border: 2px solid var(--grey-200);
+    border-radius: 5px;
+    display: inline-block;
+  }
+  form{
+    width: 100%;
+    text-align: center;
+  }
+  .underFormForgots{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 </style>
