@@ -1,6 +1,7 @@
 ---
 import Main from "../layouts/Main.astro";
 import Logo from "../../public/logo_vanir.svg";
+import ThemeToggler from "./ThemeToggler.astro";
 ---
 
 <header>
@@ -15,7 +16,11 @@ import Logo from "../../public/logo_vanir.svg";
 	<a class="links" href="#">Login</a>
 	<a class="links" href="#">Register</a>
   </div>
+  <div id="toggle">
+	<ThemeToggler />
+</div>
 </header>
+
 
 <style>
   header {
@@ -27,6 +32,11 @@ import Logo from "../../public/logo_vanir.svg";
 	display: flex;
 	align-items: center;
 	
+  }
+  header #toggle{
+    display: flex;
+	margin: 0;
+	padding: 0;
   }
   header #left,
   header #right {
