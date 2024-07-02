@@ -1,0 +1,40 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .cls-1{opacity:0.95;}
+            .cls-1,.cls-2,.cls-3,.cls-4{isolation:isolate;font-size:27px;font-family:ArialMT, Arial;}
+            .cls-1,.cls-13,.cls-2,.cls-3,.cls-4{fill:#fff;}
+            .cls-1,.cls-3{letter-spacing:0.17em;}
+            .cls-2{letter-spacing:0.159em;}
+            .cls-4{letter-spacing:0.183em;}
+            .cls-5{fill:#2d3152;}
+            .cls-6{fill:#19384c;}
+            .cls-7{fill:#0b404c;}
+            .cls-8{fill:#5a1c50;}
+            .cls-9{fill:#4b2351;}
+            .cls-10{fill:#3b2a4f;}
+            .cls-11{fill:#369db9;}
+            .cls-12{fill:#99338a;}
+        </style>
+    </defs>
+    <g id="project">
+        <text class="cls-1" transform="translate(194.73 343.878)">p</text>
+        <text class="cls-2" transform="translate(214.683 343.878)">r</text>
+        <text class="cls-3" transform="translate(227.832 343.878)">oje</text>
+        <text class="cls-4" transform="translate(276.513 343.878)">c</text>
+        <text class="cls-3" transform="translate(293.549 343.878)">t</text>
+    </g>
+    <g id="Contour">
+        <path id="bottom_left" data-name="bottom left" class="cls-5" d="M138.67,256.6l54.91,95.1,55.55,96.2H195.26a98.744,98.744,0,0,1-85.53-49.38L83.48,352.184Z"/>
+        <path id="middle_left" data-name="middle left" class="cls-6" d="M139.17,256.6l-55.44,96.02L56.4,305.137a98.787,98.787,0,0,1,0-98.77l26.47-45.85H194.54Z"/>
+        <path id="top_left" data-name="top left" class="cls-7" d="M304.47,160.95H82.62l27.11-46.8a98.744,98.744,0,0,1,85.53-49.38h53.59Z"/>
+        <path id="top_right" data-name="top right" class="cls-8" d="M303.97,160.95l-27.81-48.09L248.35,64.77h54.07a98.759,98.759,0,0,1,85.53,49.38l26.84,46.493-55.45,96.04Z"/>
+        <path id="middle_right" data-name="middle right" class="cls-9" d="M441.53,206.95a98.787,98.787,0,0,1,0,98.77l-26.8,46.413H303.74l55.35-95.883,55.45-96.04Z"/>
+        <path id="bottom_right" data-name="bottom right" class="cls-10" d="M193.48,351.7h221.5l-27.03,46.82a98.759,98.759,0,0,1-85.53,49.38H249.03Z"/>
+    </g>
+    <g id="V">
+        <path id="Shadow_Blue" data-name="Shadow Blue" class="cls-11" d="M228.169,203.36c4.651,25.28,35.031,93.287,39.64,92.629,1.213-4.315-8.09-109.079,4.854-121.955,6.674-1.238,14,1.551,16.382,4.247.083,4.247-19.416,13.348-10.112,130.247.355,3.814-10.951,5.229-21.439,4.45-20.427-20.023-55.112-100.854-54.809-108A84.5,84.5,0,0,1,228.169,203.36Z"/>
+        <path id="Shadow_pink" data-name="Shadow pink" class="cls-12" d="M223.045,197.966c4.652,25.281,35.031,93.288,39.64,92.63,1.214-4.315-8.089-109.079,4.854-121.956,6.674-1.237,14,1.552,16.382,4.248.083,4.247-19.415,13.348-10.112,130.247.356,3.814-10.951,5.229-21.438,4.449-20.427-20.022-55.113-100.854-54.809-108A84.488,84.488,0,0,1,223.045,197.966Z"/>
+        <path id="V-2" class="cls-13" d="M225.742,200.663c4.651,25.281,35.031,93.288,39.64,92.629,1.214-4.314-8.09-109.079,4.854-121.955,6.674-1.238,14,1.551,16.382,4.247.083,4.247-19.416,13.349-10.112,130.247.355,3.814-10.951,5.23-21.439,4.45-20.427-20.023-55.112-100.854-54.809-108A84.5,84.5,0,0,1,225.742,200.663Z"/>
+    </g>
+</svg>

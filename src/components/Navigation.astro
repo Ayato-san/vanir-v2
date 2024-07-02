@@ -1,0 +1,41 @@
+---
+import Main from "../layouts/Main.astro";
+import Logo from "../../public/logo_vanir.svg";
+---
+
+<header>
+  <div id="left" class="links">
+	<a href="#" class="links">Teams</a>
+	<a href="#" class="links">Tournaments</a>
+  </div>
+  <div id="logo" >
+    <a href="#"><img src={Logo.src} alt="The Logo" width="55px" height="55px" /></a>
+  </div>
+  <div id="right" class="links">
+	<a class="links" href="#">Login</a>
+	<a class="links" href="#">Register</a>
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+	align-items: center;
+    width: 100%;
+  }
+  header #logo{
+	display: flex;
+	align-items: center;
+	
+  }
+  header #left,
+  header #right {
+    flex-grow: 1;
+	padding: 8px;
+    display: flex;
+  }
+  header #left {
+    justify-content: end;
+  }
+  
+</style>
