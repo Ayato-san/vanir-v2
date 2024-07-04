@@ -5,9 +5,9 @@ import "../styles/global.css";
 <form method="post">
   <div class="form-group">
     <div class="input-group col">
-      <input class="form-control" type="text" placeholder="Email">
+      <input class="form-control" type="email" placeholder="Email">
       <br>
-      <input class="form-control" class="pwd" type="password" placeholder="Password">
+      <input class="form-control" type="password" placeholder="Password">
       <br>
       <input class="form-control" type="password" placeholder="Repeat Password">
     </div>
@@ -42,14 +42,14 @@ import "../styles/global.css";
     padding: 0;
   }
 
-  input[class="pwd"]{
+  input[class="form-control"]{
     border-bottom: 2px solid var(--grey-200);
   }
   input.form-control {
     border: 0;
     padding: 10px;
   }
-  input[type="text"]{
+  input[type="email"], input[type="password"]{
     border-bottom: 2px solid var(--grey-200);
     
   }
@@ -65,6 +65,7 @@ import "../styles/global.css";
   .input-group {
     border: 2px solid var(--grey-200);
     border-radius: 5px;
+    border-bottom: 0;
     display: inline-block;
   }
   form{

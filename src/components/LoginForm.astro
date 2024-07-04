@@ -5,7 +5,7 @@ import "../styles/global.css";
 <form method="post">
   <div class="form-group">
     <div class="input-group col">
-      <input class="form-control" type="text" placeholder="Email">
+      <input class="form-control" type="email" placeholder="Email">
       <br>
       <input class="form-control" type="password" placeholder="Password">
     </div>
@@ -44,22 +44,27 @@ import "../styles/global.css";
     border: 0;
     padding: 10px;
   }
-  input[type="text"]{
+  input[type="email"], input[type="password"]{
     border-bottom: 2px solid var(--grey-200);
     
   }
   input{
     font-size: large;
+    border-top: 0;
+    border-bottom: 2px solid var(--grey-200);
   }
   input:active{
-    border: 0;
+    border-top: 0;
+    border: none;
   }
   input:focus{
-    border: 0;
+    border-top: 0;
+    margin: 0;
   }
   .input-group {
     border: 2px solid var(--grey-200);
     border-radius: 5px;
+    border-bottom: 0;
     display: inline-block;
   }
   form{
