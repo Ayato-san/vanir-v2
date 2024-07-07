@@ -38,6 +38,9 @@ body{
   color: var(--grey-900);
   background-color: var(--background);
 }
+footer{
+  font-size: var(--font-size-sm);
+}
 .main {
   display: flex;
   flex-wrap: wrap;
