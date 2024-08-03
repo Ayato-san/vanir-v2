@@ -1,15 +1,28 @@
 ---
 import "../styles/global.css";
+import { db,User } from 'astro:db';
+
+if (Astro.request.method === 'POST') {
+  // parse form data
+  const formData = await Astro.request.formData();
+  const email = formData.get('email');
+  const password = formData.get('password');
+  const repeatPassword = formData.get('repeatPassword');
+  if (typeof email === 'string' && typeof password === 'string' && typeof repeatPassword === 'string' && password === repeatPassword) {
+    // insert form data into the User table
+    await db.insert(User).values({ email, password });
+  }
+}
 ---
 
 <form method="post">
   <div class="form-group">
     <div class="input-group col">
-      <input class="form-control" type="email" placeholder="Email">
+      <input class="form-control" type="email" name="email" id="email" placeholder="Email">
       <br>
-      <input class="form-control" type="password" placeholder="Password">
+      <input class="form-control" type="password" name="password" id="password" placeholder="Password">
       <br>
-      <input class="form-control" type="password" placeholder="Repeat Password">
+      <input class="form-control" type="password" name="repeatPassword" id="repeatPassword" placeholder="Repeat Password">
     </div>
   </div>
   <br>
