@@ -1,16 +1,16 @@
 ---
 import "../styles/global.css";
-import { db,User, eq } from 'astro:db';
+// import { db,User, eq } from 'astro:db';
 
-if (Astro.request.method === 'POST') {
-  // parse form data
-  const formData = await Astro.request.formData();
-  const email = formData.get('email');
-  const password = formData.get('password');
-  if (typeof email === 'string' && typeof password === 'string') {
-    await db.select().from(User).where(eq(User.password, password ) && eq(User.email, email ));
-  }
-}
+// if (Astro.request.method === 'POST') {
+//   // parse form data
+//   const formData = await Astro.request.formData();
+//   const email = formData.get('email');
+//   const password = formData.get('password');
+//   if (typeof email === 'string' && typeof password === 'string') {
+//     await db.select().from(User).where(eq(User.password, password ) && eq(User.email, email ));
+//   }
+// }
 ---
 
 <form method="post">
