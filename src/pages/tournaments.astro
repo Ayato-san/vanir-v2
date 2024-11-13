@@ -5,10 +5,88 @@ import Main from "../layouts/Main.astro";
 
 <title>Vanir: Tournaments</title>
 <Main>
+  <div id="tourneys" class="tourney-container">
     <TourneyLayout />
-    <TourneyLayout />
-    <TourneyLayout />
-    <TourneyLayout />
-    <TourneyLayout />
-    <TourneyLayout />
+  </div>
+  <button onclick="addTourney()" class="add-tourney-button">Add Tourney</button>
 </Main>
+
+<script lang="js" defer>
+  function addTourney() {
+    const tourneysContainer = document.getElementById("tourneys");
+
+    const newTourneyHTML = `
+      <div class="teamDivGenerated">
+        <p>TOURNEY_IMAGE</p>
+        <p>NAME_OF_TOURNEY</p>
+        <p>SHORT_DESC</p>
+        <a class="tourneyLinks" href="#">Click to see more!</a>
+      </div>
+    `;
+
+    tourneysContainer.insertAdjacentHTML("beforeend", newTourneyHTML);
+  }
+</script>
+
+<style>
+  .tourney-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .teamDivGenerated {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid var(--grey-400);
+    border-radius: 8px;
+    background-color: var(--background);
+    color: var(--grey-900);
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .tourneyLinks {
+    color: var(--grey-400);
+    font-weight: var(--font-weight-600);
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .tourneyLinks:hover {
+    color: var(--blue-500);
+  }
+
+  .add-tourney-button {
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-600);
+    color: var(--grey-600);
+    background-color: var(--blue-200);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .add-tourney-button:hover {
+    background-color: var(--blue-400);
+    transform: scale(1.05);
+  }
+
+  .add-tourney-button:active {
+    background-color: var(--blue-600);
+    transform: scale(0.95);
+  }
+</style>
