@@ -1,6 +1,10 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "jsx": "preserve"
+    "module": "ESNext",  // Use ESNext module system to support import.meta
+    "target": "ESNext",  // Ensure it is targeting ESNext for full support of ES features
+    "moduleResolution": "Node",  // Ensure compatibility with Node modules
+    "esModuleInterop": true,
+    "strict": true
   }
 }

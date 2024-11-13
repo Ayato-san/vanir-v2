@@ -1,15 +1,34 @@
-import pg from "pg"
+import dotenv from 'dotenv'; // Import dotenv
+import { Client } from 'pg'; // Import PostgreSQL client
 
-export const prerender = false;
+dotenv.config(); // Load environment variables from .env file
 
-const client = new pg.Client({
-    host: import.meta.env.POSTGRES_HOST,
-    port: import.meta.env.POSTGRES_PORT,
-    database: import.meta.env.POSTGRES_DB,
-    user: import.meta.env.POSTGRES_USER,
-    password: import.meta.env.POSTGRES_PASSWORD,
+// Create PostgreSQL client with environment variables
+const client = new Client({
+  host: process.env.POSTGRES_HOST,
+  port: Number(process.env.POSTGRES_PORT), // Ensure port is a number
+  database: process.env.POSTGRES_DB,
+  user: process.env.POSTGRES_USER,
+  password: process.env.POSTGRES_PASSWORD,
 });
 
-await client.connect()
+async function connectToDatabase() {
+  try {
+    await client.connect();
+    console.log('Connected to the PostgreSQL database.');
+  } catch (error) {
+    console.error('Failed to connect to the database:', error);
+  }
+}
 
-export { client as db }
+// Function to fetch data from the database
+async function fetchData() {
+  try {
+    const result = await client.query('SELECT * FROM your_table_name');
+    console.log(result.rows); // Log fetched data
+  } catch (error) {
+    console.error('Query failed:', error);
+  }
+}
+
+connectToDatabase();
