@@ -8,7 +8,7 @@ html {
 }
 
 html.dark {
-  --background: black;
+  --background: rgb(27, 26, 26);
   --grey-200: #eaeaea;
   --grey-400: #acacac;
   --grey-600: #ffffff;
@@ -55,6 +55,9 @@ footer{
   flex-wrap: wrap;
   align-items: flex-start;
   padding: 0.5rem;
+}
+.teams{
+  display: inline-flex;
 }
 .teamLinks {
   width:max-content;

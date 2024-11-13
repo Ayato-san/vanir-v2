@@ -1,18 +1,17 @@
 ---
 import "../styles/global.css";
-import { db,User } from 'astro:db';
 
-if (Astro.request.method === 'POST') {
-  // parse form data
-  const formData = await Astro.request.formData();
-  const email = formData.get('email');
-  const password = formData.get('password');
-  const repeatPassword = formData.get('repeatPassword');
-  if (typeof email === 'string' && typeof password === 'string' && typeof repeatPassword === 'string' && password === repeatPassword) {
-    // insert form data into the User table
-    await db.insert(User).values({ email, password });
-  }
-}
+// if (Astro.request.method === 'POST') {
+//   // parse form data
+//   const formData = await Astro.request.formData();
+//   const email = formData.get('email');
+//   const password = formData.get('password');
+//   const repeatPassword = formData.get('repeatPassword');
+//   if (typeof email === 'string' && typeof password === 'string' && typeof repeatPassword === 'string' && password === repeatPassword) {
+//     // insert form data into the User table
+//     await db.insert(User).values({ email, password });
+//   }
+// }
 ---
 
 <form method="post">
