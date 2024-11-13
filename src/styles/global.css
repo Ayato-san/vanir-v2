@@ -31,12 +31,21 @@ html.dark {
   --line-height-sm: 1.3;
   --line-height-ms: 1.5;
   --blue-200: #73bcf7;
-  --blue-400: #06c;
+  --blue-500: #06c;
+  --blue-400: #517ac5;
   --blue-600: #002952;
 }
 body{
   color: var(--grey-900);
   background-color: var(--background);
+}
+
+.teamDivGenerated > p{
+  width: 10%;
+  flex-wrap: wrap;
+  display: flex;
+  align-items:center;
+  padding: 2.5rem;
 }
 footer{
   font-size: var(--font-size-sm);
@@ -47,6 +56,16 @@ footer{
   align-items: flex-start;
   padding: 0.5rem;
 }
+.teamLinks {
+  width:max-content;
+  padding-left: 40%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--grey-400);
+  font-weight: var(--font-weight-600);
+}
 .links {
   padding: 0 8px;
   border-radius: 10px;
@@ -56,4 +75,7 @@ footer{
 }
 .links:hover{
   color: var(--blue-400);
+}
+.teamLinks:hover{
+  color: var(--blue-500);
 }
