@@ -34,9 +34,9 @@ import Main from "../layouts/Main.astro";
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    width: 80%;
+    width: 100%;
     margin: auto;
-    padding: 1rem;
+    padding: 0.2rem;
     align-items: flex-start;
   }
 
@@ -51,7 +51,7 @@ import Main from "../layouts/Main.astro";
     border-radius: 8px;
     background-color: var(--background);
     color: var(--grey-900);
-    width: 200px; /* Adjust width as needed */
+    width: 100px; /* Adjust width as needed */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
@@ -71,7 +71,8 @@ import Main from "../layouts/Main.astro";
 
   .add-team-button {
     display: inline-block;
-    margin: 1rem auto;
+    position: absolute;
+    margin: 0.2rem auto;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 8px;
