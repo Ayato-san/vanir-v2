@@ -92,7 +92,7 @@
   };
 
   const initialColourMode = getInitialColourMode();
-  const setInitialColourMode = (mode) => {
+  const setInitialColourMode = (mode: any) => {
     if (mode === LIGHT_THEME) {
       rootEl.classList.remove(DARK_THEME_CLASS);
     } else {
