@@ -13,9 +13,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# environment variables
+# Secrets
 .env
-.env.production
+.env.local
+.env.production.local
+.env.development.local
 
 # macOS-specific files
 .DS_Store
