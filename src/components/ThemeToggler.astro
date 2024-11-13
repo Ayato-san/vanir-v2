@@ -26,9 +26,31 @@
 </button>
 
 <style>
-  .sun {
-    display: none;
+  .sun,
+  .moon {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
   }
+
+  .sun {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .moon {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  :global(.dark) .sun {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  :global(.dark) .moon {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   button {
     cursor: pointer;
     border-radius: 10px;
@@ -36,17 +58,13 @@
     padding: 5px 10px;
     transition: all 0.5s ease-in-out;
   }
+
   button:hover {
     transform: scale(0.9);
   }
+
   button:active {
     transform: scale(1);
-  }
-  :global(.dark) .sun {
-    display: flex;
-  }
-  :global(.dark) .moon {
-    display: none;
   }
 </style>
 
@@ -66,7 +84,7 @@
       return previousColour;
     }
 
-    if (window.matchMedia("(prefers-color-scheme: dark").matches) {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       return DARK_THEME;
     }
 
@@ -74,8 +92,8 @@
   };
 
   const initialColourMode = getInitialColourMode();
-  const setInitialColourMode = (mode: string) => {
-    if (mode == LIGHT_THEME) {
+  const setInitialColourMode = (mode) => {
+    if (mode === LIGHT_THEME) {
       rootEl.classList.remove(DARK_THEME_CLASS);
     } else {
       rootEl.classList.add(DARK_THEME_CLASS);
